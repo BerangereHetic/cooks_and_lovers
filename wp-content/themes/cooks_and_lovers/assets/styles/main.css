@@ -1,0 +1,38 @@
+body{
+  margin:0;
+  font-size:16px;
+  font-family: 'Arapey', serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Abril Fatface', cursive;
+/*  text-transform: uppercase;*/
+  color:#f1c40f;
+}
+
+a{
+  color:#f1c40f;
+  text-decoration: none;
+}
+a:hover{
+  color:#f39c12;
+  text-decoration: underline;
+}
+
+header#header{
+  background:#ecf0f1;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.logo{
+  float:left;
+  max-width: 250px;
+  height: auto;
+  padding-right:20px;
+}
+
+.thumbnail img{
+  max-width:100%;
+  height: auto;
+}
