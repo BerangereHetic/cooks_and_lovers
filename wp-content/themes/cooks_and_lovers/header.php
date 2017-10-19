@@ -31,3 +31,17 @@
           </div>
         <!-- Tout le contenu de l entête de mon site -->
         </header>
+        
+        <div class="menu">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="offset-sm-2 col-sm-8">
+                        <?php 
+                            wp_nav_menu( array( 'theme_location' => 'max_mega_menu_1' ) );
+                        ?>
+                    </div>
+                    
+                    <div class="offset-sm-2"></div>
+                </div>
+            </div>
+        </div>

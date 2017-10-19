@@ -1,10 +1,10 @@
 <?php
 
-function ajout_custom_type_film() {
-  $post_type = "profiles";
-$labels = array(
-        'name'               => 'Profiles des C&L',
-        'singular_name'      => 'Profile',
+function ajout_custom_type_profils() {
+    $post_type = "profils";
+    $labels = array(
+        'name'               => 'Profils des C&L',
+        'singular_name'      => 'Profil',
         'all_items'          => 'Tous les Cooks and Lovers',
         'add_new'            => 'Ajouter un profil',
         'add_new_item'       => 'Ajouter un profil',
@@ -15,7 +15,7 @@ $labels = array(
         'not_found'          => 'Pas de résultat',
         'not_found_in_trash' => 'Pas de résultat dans la corbeille',
         'parent_item_colon'  => 'Votre C&L se trouve dans la catégorie :',
-        'menu_name'          => 'Cooks & Lovers',
+        'menu_name'          => 'Profils',
     );
 
     $args = array(
@@ -39,7 +39,7 @@ $labels = array(
     register_post_type($post_type, $args );
 
     $taxonomy = "food";
-    $object_type = array("profiles");
+    $object_type = array("profils");
     $args = array(
           'label' => __( 'Genre' ),
           'rewrite' => array( 'slug' => 'food' ),
@@ -48,7 +48,7 @@ $labels = array(
     register_taxonomy( $taxonomy, $object_type, $args );
 
     $taxonomy = "regions";
-    $object_type = array("profiles");
+    $object_type = array("profils");
     $args = array(
           'label' => __( 'Géolocalisation' ),
           'rewrite' => array( 'slug' => 'regions' ),
@@ -58,4 +58,4 @@ $labels = array(
 
 
 }
-add_action( 'init', 'ajout_custom_type_film' );
+add_action( 'init', 'ajout_custom_type_profils' );

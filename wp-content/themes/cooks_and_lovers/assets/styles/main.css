@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
   margin:0;
   font-size:16px;
@@ -20,7 +24,7 @@ a:hover{
 }
 
 header#header{
-  background:#ecf0f1;
+  background: #80C5EE;
   padding-top:30px;
   padding-bottom:30px;
 }
@@ -32,7 +36,8 @@ header#header{
   padding-right:20px;
 }
 
-.thumbnail img{
+.thumbnail{
   max-width:100%;
   height: auto;
 }
+
