@@ -4,7 +4,7 @@
 
 body{
   margin:0;
-  font-size:16px;
+  font-size:18px;
   font-family: 'Arapey', serif;
 }
 
@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'Abril Fatface', cursive;
 /*  text-transform: uppercase;*/
   color:#f1c40f;
+  margin-top : 20px;
 }
 
 a{
@@ -24,14 +25,14 @@ a:hover{
 }
 
 header#header{
-  background: #80C5EE;
-  padding-top:30px;
-  padding-bottom:30px;
+  background: #ffffff;
+/*  padding-top:10px;*/
+  padding-bottom:10px;
 }
 
 .logo{
   float:left;
-  max-width: 250px;
+  max-width: 120px;
   height: auto;
   padding-right:20px;
 }
@@ -41,3 +42,38 @@ header#header{
   height: auto;
 }
 
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.clearBoth{
+    clear: both;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.button{
+    width: 200px;
+    height: 40px;
+    background: rgb(160, 228, 147);
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    margin-top: 40px;
+}
+
+.pagination{
+    margin-left: 50%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

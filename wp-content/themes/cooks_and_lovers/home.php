@@ -33,21 +33,31 @@
 
     ?>
      
-      <article class="col-sm-12 col-md-4">
-        <?php
-            if(has_post_thumbnail())
-            {
-              echo '<div class="thumbnail">';
-                //remplacer cette ligne
-                the_post_thumbnail("hub_profils_thumbnail");
-              echo '</div>';
-            }
-         ?>
+      <article class="col-sm-12 col-md-3">
+        
+        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <?php
+                if(has_post_thumbnail())
+                {
+                  echo '<div class="thumbnail">';
+                    //remplacer cette ligne
+                    the_post_thumbnail("hub_profils_thumbnail");
+                  echo '</div>';
+                }
+             ?>
+        </a>
          
-        <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-        <h2>C&L depuis le <?php the_time('F jS, Y') ?></h2>
+        <p class="bold"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></p>
+        <p><?php the_field('statut'); ?></p>
+        
+        <p><?php the_field('age'); ?></p>
+        
         <p><?php ?></p>
+        
         <p><?php the_excerpt(); ?></p>
+        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="button">
+              Voir le profil
+        </a>
       </article>
       <?php
         }
@@ -57,6 +67,7 @@
    ?>
     
   </div>
+  
   <div class="pagination">
     <?php wp_pagenavi(array( 'query' => $the_query )); ?>
   </div>

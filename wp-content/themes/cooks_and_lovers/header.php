@@ -23,7 +23,7 @@
              
               <!-- gestion du logo, du nom du site et du slogan  -->
               <!-- informations paramétrables dans le back-office "Réglages" -->
-              <img src="<?= IMAGES_URL; ?>/bowl-with-vegetables.png" alt="<?php bloginfo("title"); ?>" class="logo"/>
+              <img src="<?= IMAGES_URL; ?>/food-logo.jpg" alt="<?php bloginfo("title"); ?>" class="logo"/>
               <h4><a href="<?php bloginfo("url"); ?>" title="<?php bloginfo("title"); ?>"><?php bloginfo("title"); ?></a></h4>
               <h5><?php bloginfo( "description" );?></h5>
             </div>
@@ -32,10 +32,12 @@
         <!-- Tout le contenu de l entête de mon site -->
         </header>
         
+        <div class="clearBoth"></div>
+        
         <div class="menu">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="offset-sm-2 col-sm-8">
+                    <div class="col-sm-12">
                         <?php 
                             wp_nav_menu( array( 'theme_location' => 'max_mega_menu_1' ) );
                         ?>
