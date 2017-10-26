@@ -32,17 +32,27 @@ function ajout_custom_type_profils() {
         'exclude_from_search' => false,
         'has_archive'         => false,
         'query_var'           => true,
+        'capabilities'        => array(
+            'edit_post'          => 'edit_profil', 
+            'read_post'          => 'read_profil', 
+            'delete_post'        => 'delete_profil', 
+            'edit_posts'         => 'edit_profil', 
+            'edit_others_posts'  => 'edit_others_profils', 
+            'publish_posts'      => 'publish_profils',       
+            'read_private_posts' => 'read_private_profils', 
+            'create_posts'       => 'edit_profils', 
+        ),
         'can_export'          => true,
         'rewrite'             => array( 'slug' => $post_type )
     );
 
     register_post_type($post_type, $args );
 
-    $taxonomy = "food";
+    $taxonomy = "genre";
     $object_type = array("profils");
     $args = array(
           'label' => __( 'Genre' ),
-          'rewrite' => array( 'slug' => 'food' ),
+          'rewrite' => array( 'slug' => 'genre' ),
           'hierarchical' => true,
       );
     register_taxonomy( $taxonomy, $object_type, $args );

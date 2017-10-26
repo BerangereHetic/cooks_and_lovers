@@ -11,23 +11,23 @@
         while (have_posts()){
             the_post();
     ?>
-      <article class="col-sm-12 col-md-4">
-        <?php
-            if(has_post_thumbnail())
-            {
-              echo '<div class="thumbnail">';
-                //peut-être changer cette ligne
-                the_post_thumbnail("hub_article_thumbnail");
-              echo '</div>';
-            }
-         ?>
-        <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-        <h2>Posté le <?php the_time('F jS, Y') ?></h2>
-        <p><?php the_excerpt(); ?></p>
-      </article>
+        <article class="col-sm-12 col-md-4">
+            <?php
+                if(has_post_thumbnail())
+                {
+                  echo '<div class="thumbnail">';
+                    //peut-être changer cette ligne
+                    the_post_thumbnail("hub_article_thumbnail");
+                  echo '</div>';
+                }
+             ?>
+            <h1><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
+            <h2>Posté le <?php the_time('F jS, Y') ?></h2>
+            <p><?php the_excerpt(); ?></p>
+        </article>
 
-    <?php
-    }
+        <?php
+        }
     }
     else {
     ?>

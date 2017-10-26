@@ -38,8 +38,15 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12">
-                        <?php 
-                            wp_nav_menu( array( 'theme_location' => 'max_mega_menu_1' ) );
+                        <?php // SYNTAXE : wp_nav_menu( array $args = array() )
+                            $args=array(
+                                'theme_location' => 'header', // nom du slug
+                                'menu' => 'header_fr', // nom à donner cette occurence du menu
+                                'menu_class' => 'menu_header', // class à attribuer au menu
+                                'menu_id' => 'menu_id' // id à attribuer au menu
+                                // voir les autres arguments possibles sur le codex
+                            );
+                            wp_nav_menu($args);
                         ?>
                     </div>
                     
